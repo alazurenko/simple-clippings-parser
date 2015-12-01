@@ -1,0 +1,12 @@
+{
+  "name": "simple-clippings-parser",
+  "version": "0.0.1",
+  "description": "Simple parser for Kindle Clippings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andrey Lazurenko",
+  "license": "ISC"
+}
