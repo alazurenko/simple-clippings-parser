@@ -6,10 +6,10 @@ Node module that helps parse clippings made by Kindle.
 - **parseFile (fileName)** - promise that return pased data in JSON 
 ```json
 [{
-    book: 'Book Title',
-    author: 'Author Name',
-    date: 'Date of Clipping',
-    quote: 'Quote content',
+    "book": "Book Title",
+    "author": "Author Name",
+    "date": "Date of Clipping",
+    "quote": "Quote content",
 }]
 ```
 
