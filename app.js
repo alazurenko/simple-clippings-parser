@@ -1,6 +1,7 @@
 var simpleClipper = require('./js/index');
+var fs = require('fs');
 
-simpleClipper.parseFile('myClippings.txt').then(function(data) {
-    console.log(data);
+
+simpleClipper.parseFileToJson('newClips.txt', 'tt').then(function() {
+    console.log('callaback');
 });
-
