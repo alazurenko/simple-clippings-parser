@@ -3,7 +3,7 @@ var expect = chai.expect;
 var assert = chai.assert;
 var should = chai.should();
 
-var clippingsParser = require('../js/index');
+var clippingsParser = require('../index');
 
 describe('Simple Clippings Parser', function() {
 

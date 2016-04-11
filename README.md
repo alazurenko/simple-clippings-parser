@@ -16,6 +16,6 @@ Node module that helps parse clippings from Kindle.
 
 #### Example
 ```javascript
-var simpleClipper = require('simple-clippings');
+var simpleClipper = require('simple-clippings-parser');
 simpleClipper.parseFile('myClippings.txt').then(callback);
 ```
