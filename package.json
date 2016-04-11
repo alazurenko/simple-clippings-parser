@@ -1,6 +1,6 @@
 {
   "name": "simple-clippings-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple parser for Kindle Clippings",
   "main": "index.js",
   "scripts": {
