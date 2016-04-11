@@ -4,7 +4,7 @@
   "description": "Simple parser for Kindle Clippings",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "mocha tests"
   },
   "keywords": [],
   "author": "Andrey Lazurenko",
