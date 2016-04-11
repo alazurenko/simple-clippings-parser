@@ -1,9 +1,9 @@
 # simple-clippings
-Node module that helps parse clippings made by Kindle.
+Node module that helps parse clippings from Kindle.
 
 ## API
 
-- **parseFile (fileName)** - promise that returns parsed data in JSON 
+- **parseFile (filePath)** - returns promise that resolves when file is parsed.
 ```json
 [{
     "book": "Book Title",
@@ -14,11 +14,8 @@ Node module that helps parse clippings made by Kindle.
 ```
 
 
-
 #### Example
 ```javascript
 var simpleClipper = require('simple-clippings');
-simpleClipper.parseFile('myClippings.txt').then((data) => {
-    //parsed data
-});
+simpleClipper.parseFile('myClippings.txt').then(callback);
 ```
