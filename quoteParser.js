@@ -1,7 +1,10 @@
-var jsonTransformer = require('./jsonTransformer');
+'use strict';
+const jsonTransformer = require('./jsonTransformer');
 
 function parseQuote(quote) {
-    var paragraphs = quote.split('\n').filter(filterParagraphs).map(prepareParagraph);
+    let paragraphs = quote.split('\n')
+                          .filter(filterParagraphs)
+                          .map(prepareParagraph);
 
     return jsonTransformer(paragraphs);
 }

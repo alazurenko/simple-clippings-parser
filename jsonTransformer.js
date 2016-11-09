@@ -1,3 +1,4 @@
+'use strict';
 function transform(paragraph) {
     // paragraph = [0] headings; [1] date details; [2] cite
 
@@ -9,8 +10,8 @@ function transform(paragraph) {
 }
 
 function getBookDetails(heading) {
-    var head = heading.split(/[()]/);
-
+    let head = heading.split(/[()]/);
+    
     return {
         book: head[0].trim(),
         author: head[1] && head[1].trim()
@@ -18,7 +19,7 @@ function getBookDetails(heading) {
 }
 
 function getTimeDetails(time) {
-    var dateOfCite = time.split('|').pop();
+    let dateOfCite = time.split('|').pop();
 
     return {
         date: new Date(dateOfCite.trim())
