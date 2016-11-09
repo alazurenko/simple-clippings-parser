@@ -1,6 +1,6 @@
 'use strict';
 const fs = require('fs');
-const quoteParser = require('./quoteParser');
+const quoteParser = require('./js/quoteParser');
 
 function parseFile(filePath) {
   return new Promise(function(resolve, reject) {
