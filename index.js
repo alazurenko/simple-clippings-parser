@@ -10,7 +10,7 @@ function parseFile(filePath) {
           reject(err);
           throw err;
       }
-      
+
       resolve(quoteParser(data));
     });
   });

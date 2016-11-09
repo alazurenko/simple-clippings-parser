@@ -3,10 +3,10 @@ const jsonTransformer = require('./jsonTransformer');
 const SEPARATOR = '==========';
 
 function parseQuotes(data) {
-    let readData = data.split(SEPARATOR);
-    readData.pop(); //remove last empty quote due to separator
+  let readData = data.split(SEPARATOR);
+  readData.pop(); //remove last empty quote due to separator
 
-    return readData.map(parseQuote);
+  return readData.map(parseQuote);
 }
 
 function parseQuote(quote) {
@@ -18,11 +18,11 @@ function parseQuote(quote) {
 }
 
 function filterParagraphs(paragraph) {
-    return paragraph !== '\r' && paragraph !== '';
+  return paragraph !== '\r' && paragraph !== '';
 }
 
 function prepareParagraph(paragraph) {
-    return paragraph.replace('\r', '');
+  return paragraph.replace('\r', '');
 }
 
 module.exports = parseQuotes;
