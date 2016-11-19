@@ -8,7 +8,6 @@ function parseFile(filePath) {
 
       if (err) {
           reject(err);
-          throw err;
       }
 
       resolve(quoteParser(data));
@@ -17,6 +16,4 @@ function parseFile(filePath) {
 }
 
 
-module.exports = {
-    parseFile: parseFile
-};
+module.exports = { parseFile };

@@ -1,31 +1,33 @@
-var chai = require('chai');
-var expect = chai.expect;
-var assert = chai.assert;
-var should = chai.should();
+'use strict';
+const chai = require('chai');
+const expect = chai.expect;
+const assert = chai.assert;
+const should = chai.should();
+const RECORDS_IN_FILE = 2;
 
-var clippingsParser = require('../index');
+const clippingsParser = require('../index');
 
-describe('Simple Clippings Parser', function() {
+describe('Simple Clippings Parser', () => {
 
-    it('should have function parseFile', function() {
+    it('should have function parseFile', () => {
         clippingsParser.should.have.property('parseFile');
     });
 
-    it('should parse data from .txt file', function() {
-        return clippingsParser.parseFile('tests/example.txt').then(function(data) {
+    it('should parse data from .txt file', () => {
+        return clippingsParser.parseFile('tests/example.txt').then(data => {
             should.exist(data);
         });
     });
 
-    it('should return 2 records from test file', function() {
-        return clippingsParser.parseFile('tests/example.txt').then(function(data) {
-            expect(data.length).to.equal(2);
+    it('should return 2 records from test file', () => {
+        return clippingsParser.parseFile('tests/example.txt').then(data => {
+            expect(data.length).to.equal(RECORDS_IN_FILE);
         });
     });
 
-    it('should return expected valid object', function() {
-        return clippingsParser.parseFile('tests/example.txt').then(function(data) {
-            var firstClip  = data[0];
+    it('should return expected valid object', () => {
+        return clippingsParser.parseFile('tests/example.txt').then(data => {
+            let firstClip  = data[0];
 
             expect(firstClip.book).to.equal('Test1');
             expect(firstClip.author).to.equal('Phantom');
