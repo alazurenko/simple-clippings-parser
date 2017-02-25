@@ -1,4 +1,4 @@
-# simple-clippings
+# simple-clippings-parser
 Node module that helps parse clippings from Amazon Kindle.
 
 ## API
