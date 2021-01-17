@@ -1,22 +1,33 @@
 # simple-clippings-parser
-Node module that helps parse clippings from Amazon Kindle.
 
-## API
+Parse clippings from Amazon Kindle
 
-### parseFile (pathToFile)
-Returns promise that resolves when file is parsed. Promise resolved with collection of cites.
+## Install
 
-#### Example
-```javascript
-const simpleClipper = require('simple-clippings-parser');
-simpleClipper.parseFile('myClippings.txt').then((data) => {
-  /*
-  data = [{
-    "book": "Book Title",
-    "author": "Author Name",
-    "date": "Date of Clipping",
-    "quote": "Quote content"
-    }]
-  */
-});
+```sh
+npm i simple-clippings-parser
 ```
+
+## Usage
+
+```javascript
+import { parseFile } = require('simple-clippings-parser');
+
+await data = parseFile('myClippings.txt');
+/*
+data = [{
+  "book": "Book Title",
+  "author": "Author Name",
+  "date": "Date of Clipping",
+  "quote": "Quote content"
+  }]
+*/
+```
+
+## License
+
+[MIT](https://opensource.org/licenses/mit-license.php)
+
+## Contribute
+
+Feel free to contribute

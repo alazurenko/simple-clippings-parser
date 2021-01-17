@@ -1,8 +1,8 @@
 'use strict';
-const jsonTransformer = require('./jsonTransformer');
+import { transform } from './jsonTransformer.js';
 const SEPARATOR = '==========';
 
-function parseQuotes(data) {
+export function parseQuotes(data) {
   let readData = data.split(SEPARATOR);
   readData.pop(); //remove last empty quote due to separator
 
@@ -14,7 +14,7 @@ function parseQuote(quote) {
                         .filter(filterParagraphs)
                         .map(prepareParagraph);
 
-  return jsonTransformer(paragraphs);
+  return transform(paragraphs);
 }
 
 function filterParagraphs(paragraph) {
@@ -25,4 +25,4 @@ function prepareParagraph(paragraph) {
   return paragraph.replace('\r', '');
 }
 
-module.exports = parseQuotes;
+// module.exports = parseQuotes;
