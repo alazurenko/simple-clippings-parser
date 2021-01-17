@@ -11,7 +11,7 @@ npm i simple-clippings-parser
 ## Usage
 
 ```javascript
-import { parseFile } = require('simple-clippings-parser');
+import { parseFile } from 'simple-clippings-parser';
 
 await data = parseFile('myClippings.txt');
 /*
